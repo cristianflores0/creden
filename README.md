@@ -1,43 +1,17 @@
-# Astro Starter Kit: Minimal
+# Credencial 2026
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Sitio web desarrollado con Astro para presentar la propuesta digital de Credencial 2026. El proyecto funciona como una landing institucional orientada a comunicar de forma clara la oferta de valor del negocio, con foco en procesamiento, emision y adquirencia.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Descripcion
 
-## 🚀 Project Structure
+Esta implementacion utiliza Astro como base para construir una experiencia web rapida, moderna y facil de mantener. La interfaz esta organizada en componentes reutilizables y estilos globales, lo que permite escalar el sitio con nuevas secciones y contenidos sin perder consistencia visual.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Stack
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Astro
+- Tailwind CSS
+- JavaScript / Astro Components
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Objetivo
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+El objetivo de este repositorio es servir como base del sitio institucional de Credencial 2026, con una estructura preparada para evolucionar el contenido comercial, reforzar la presencia de marca y sostener futuras mejoras de diseno y comunicacion.
