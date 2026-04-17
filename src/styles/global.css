@@ -3,10 +3,19 @@
 
 :root {
   --creden-green: #59ce91;
+  --creden-azul: #23246c;
 }
 
 .creden-green {
   color: var(--creden-green);
+}
+
+.creden-azul {
+  color: var(--creden-azul);
+}
+
+.border-creden-azul {
+  border-color: var(--creden-azul);
 }
 
 .creden-bg-negro {
@@ -73,4 +82,11 @@
   font-size: 48pt;
   font-weight: 400;
   line-height: 1.2;
+}
+
+.creden-cards {
+  background-color: white;
+  border: 2px solid var(--creden-azul);
+  padding: 1rem 1rem 3rem 1rem;
+  border-radius: 1rem;
 }
