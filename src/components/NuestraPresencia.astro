@@ -1,11 +1,76 @@
 ---
-import Card from "./Card.astro";
 ---
 
-<section class="p-8">
-  <div class="grid md:grid-cols-3 gap-4">
-    <Card title="PROCESAMIENTO" text="Pagos rápidos y seguros en cada transacción digital. 99,7% de eficiencia operativa" />
-    <Card title="EMISIÓN" text="Ofrecemos tarjetas bajo licencia Mastercard, Visa, Carnet y propias, para gestionar gastos, fidelizar usuarios y sumarle valor al negocio." />
-    <Card title="ADQUIRENCIA" text="Desde transferencias instantáneas hasta pagos QR y contactless, ayudamos a reducir costos y mejorar el control financiero." />
+<section class="w-full text-white py-16 px-8" style="background-image: url('/assets/images/FondoNuestra.png'); background-size: cover; background-position: right; background-repeat: no-repeat;">
+  <div class="flex gap-12 mb-16">
+    <!-- Left side: Title and statistics -->
+    <div class="w-1/2">
+      <h2 class="text-4xl font-bold mb-8">Nuestra presencia</h2>
+      
+      <div class="space-y-4">
+        <div class="flex gap-3 items-start">
+          <img src="/assets/icons/Tick verde.svg" alt="Tick" class="w-6 h-6 flex-shrink-0 mt-1" />
+          <p>+18M de tarjetas procesadas en la región</p>
+        </div>
+        
+        <div class="flex gap-3 items-start">
+          <img src="/assets/icons/Tick verde.svg" alt="Tick" class="w-6 h-6 flex-shrink-0 mt-1" />
+          <p>Homologados para operar en 15 países de LATAM</p>
+        </div>
+        
+        <div class="flex gap-3 items-start">
+          <img src="/assets/icons/Tick verde.svg" alt="Tick" class="w-6 h-6 flex-shrink-0 mt-1" />
+          <p>+170M transacciones mensuales</p>
+        </div>
+        
+        <div class="flex gap-3 items-start">
+          <img src="/assets/icons/Tick verde.svg" alt="Tick" class="w-6 h-6 flex-shrink-0 mt-1" />
+          <p>+2.000M transacciones anuales</p>
+        </div>
+        
+        <div class="flex gap-3 items-start">
+          <img src="/assets/icons/Tick verde.svg" alt="Tick" class="w-6 h-6 flex-shrink-0 mt-1" />
+          <p>4 data centers distribuidos en México, Estados Unidos y Argentina</p>
+        </div>
+        
+        <div class="flex gap-3 items-start mt-8 pt-8 border-t border-gray-600">
+          <img src="/assets/icons/Globo.svg" alt="Globe" class="w-6 h-6 flex-shrink-0 mt-1" />
+          <p>Oficinas comerciales en México, Ecuador y Argentina.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Cards section -->
+  <div class="grid md:grid-cols-3 gap-6 mt-16">
+    <div class="bg-white text-gray-900 p-6 rounded-lg flex flex-col justify-between">
+      <div>
+        <h3 class="text-lg font-bold text-blue-700 mb-4">PROCESAMIENTO</h3>
+        <p class="text-sm text-gray-700">Pagos rápidos y seguros en cada transacción digital. 99,7% de eficiencia operativa.</p>
+      </div>
+      <div class="mt-6">
+        <img src="/assets/icons/Flecha.svg" alt="Arrow" class="w-6 h-6" />
+      </div>
+    </div>
+    
+    <div class="bg-white text-gray-900 p-6 rounded-lg flex flex-col justify-between">
+      <div>
+        <h3 class="text-lg font-bold text-blue-700 mb-4">EMISIÓN</h3>
+        <p class="text-sm text-gray-700">Ofrecemos tarjetas bajo licencia Mastercard, Visa, Carnet y propias, para gestionar gastos, fidelizar usuarios y sumarle valor al negocio.</p>
+      </div>
+      <div class="mt-6">
+        <img src="/assets/icons/Flecha.svg" alt="Arrow" class="w-6 h-6" />
+      </div>
+    </div>
+    
+    <div class="bg-white text-gray-900 p-6 rounded-lg flex flex-col justify-between">
+      <div>
+        <h3 class="text-lg font-bold text-blue-700 mb-4">ADQUIRENCIA</h3>
+        <p class="text-sm text-gray-700">Desde transferencias instantáneas hasta pagos QR y contactless, ayudamos a reducir costos y mejorar el control financiero.</p>
+      </div>
+      <div class="mt-6">
+        <img src="/assets/icons/Flecha.svg" alt="Arrow" class="w-6 h-6" />
+      </div>
+    </div>
   </div>
 </section>
