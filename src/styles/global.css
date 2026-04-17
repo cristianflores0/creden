@@ -1,1 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
+
+:root {
+  --creden-green: #59ce91;
+}
+
+.creden-green {
+  color: var(--creden-green);
+}
+
+.creden-bg-negro {
+  background-color: #1e1e1d;
+}
+
+.w-1-cols {
+  width: 8.333%;
+}
+
+.w-2-cols {
+  width: 16.666%;
+}
+
+.w-3-cols {
+  width: 25%;
+}
+
+.w-4-cols {
+  width: 33.333%;
+}
+
+.w-5-cols {
+  width: 41.666%;
+}
+
+.w-6-cols {
+  width: 50%;
+}
+
+.w-7-cols {
+  width: 58.333%;
+}
+
+.w-8-cols {
+  width: 66.666%;
+}
+
+.w-9-cols {
+  width: 75%;
+}
+
+.w-10-cols {
+  width: 83.333%;
+}
+
+.w-11-cols {
+  width: 91.666%;
+}
+
+.w-12-cols {
+  width: 100%;
+}
