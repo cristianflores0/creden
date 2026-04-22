@@ -6,8 +6,16 @@
   --creden-azul: #23246c;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 .creden-green {
   color: var(--creden-green);
+}
+
+.bg-creden-green {
+  background-color: var(--creden-green);
 }
 
 .creden-azul {
