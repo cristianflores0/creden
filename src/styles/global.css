@@ -98,3 +98,12 @@ body {
   padding: 1rem 1rem 3rem 1rem;
   border-radius: 1rem;
 }
+
+.creden-espaciado {
+  letter-spacing: 0.44em;
+  font-family: 'Myriad Pro', sans-serif;
+}
+
+.creden-poppins {
+  font-family: 'Poppins', sans-serif;
+}
