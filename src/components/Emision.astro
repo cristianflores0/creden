@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import emisionIzq from '../assets/images/Emision Imagen Izquierda.png';
+import emisionDer from '../assets/images/Emision Imagen Derecha.png';
 ---
 
 <section class="w-full bg-gray-100 py-16 mt-0" id="emision">
@@ -48,10 +51,10 @@
   <div class="px-8 mb-16">
     <div class="flex gap-6 justify-center">
       <div class="flex-1">
-        <img src="/assets/images/Emision Imagen Izquierda.png" alt="Emisión Izquierda" class="w-full rounded-lg" loading="lazy">
+        <Image src={emisionIzq} alt="Emisión Izquierda" class="w-full rounded-lg" />
       </div>
       <div class="flex-1">
-        <img src="/assets/images/Emision Imagen Derecha.png" alt="Emisión Derecha" class="w-full rounded-lg" loading="lazy">
+        <Image src={emisionDer} alt="Emisión Derecha" class="w-full rounded-lg" />
       </div>
     </div>
   </div>

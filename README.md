@@ -1,6 +1,6 @@
 # Credencial 2026
 
-**Version:** 0.0.6
+**Version:** 0.0.8
 
 Sitio web desarrollado con Astro para presentar la propuesta digital de Credencial 2026. El proyecto funciona como una landing institucional orientada a comunicar de forma clara la oferta de valor del negocio, con foco en procesamiento, emision y adquirencia.
 

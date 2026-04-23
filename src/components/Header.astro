@@ -1,7 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import logoImage from '../assets/logos/Recurso 3.png';
+---
+
 <header class="flex items-center justify-between px-6 py-4 shadow-sm sticky top-0 z-50 bg-white">
   <!-- Logo -->
   <a href="#" class="pl-12 hover:opacity-80 transition-opacity" aria-label="Home">
-    <img src="/assets/logos/Recurso 3.png" alt="Credencial Logo" class="h-10" loading="lazy" />
+    <Image src={logoImage} alt="Credencial Logo" class="h-10" />
   </a>
 
   <!-- Nav -->
