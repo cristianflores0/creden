@@ -115,3 +115,16 @@ body {
 .creden-poppins {
   font-family: 'Poppins', sans-serif;
 }
+
+/* Form Styles */
+.creden-form-bg {
+  background-color: #1d1f10;
+}
+
+.creden-form-input {
+  background-color: #2F3123;
+}
+
+.creden-form-btn {
+  background-color: #2B72FF;
+}
