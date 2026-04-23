@@ -22,12 +22,20 @@ body {
   color: var(--creden-azul);
 }
 
+.bg-creden-azul {
+  background-color: var(--creden-azul);
+}
+
 .border-creden-azul {
   border-color: var(--creden-azul);
 }
 
 .creden-bg-negro {
   background-color: #1e1e1d;
+}
+
+.creden-box-rounded {
+  border-radius: 40px 10px 40px 10px;
 }
 
 .w-1-cols {
