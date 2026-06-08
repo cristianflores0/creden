@@ -1,82 +1,66 @@
 ---
 import { Image } from 'astro:assets';
-import tickIcon from '../assets/icons/Tick verde.svg';
-import globeIcon from '../assets/icons/Globo.svg';
-import arrowIcon from '../assets/icons/Flecha.svg';
+import tarjetas from '../assets/icons/Tarjetas.png';
+import paises from '../assets/icons/Paises.png';
+import transacciones from '../assets/icons/Transacciones.png';
+import dataCenter from '../assets/icons/Data Center.png';
+import oficinas from '../assets/icons/Oficinas.png';
+import fondoNuestraPresencia from '../assets/images/Fondo Nuestra Presencia.png';
 ---
 
-<!-- Combined section with image background and overlapping cards -->
-<section class="w-full text-white px-8 relative" style="background-image: url('/assets/images/FondoNuestra.png'); background-size: cover; background-position: right; background-repeat: no-repeat; background-color: #1e1e1d; padding-bottom: 80px; margin-top: 60px;">
+<!-- Statistics Cards Section -->
+<section class="w-full text-white px-8 py-20" style={`background-image: url('${fondoNuestraPresencia.src}'); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #1e1e1d;`}>
   
-  <!-- Statistics section -->
-  <div class="pt-30 pb-0">
-    <div class="flex gap-12">
-      <!-- Left side: Title and statistics -->
-      <div class="w-1/2">
-        <h2 class="text-4xl mb-8">Nuestra presencia</h2>
-        
-        <div class="space-y-4 pt-4">
-          <div class="flex gap-1 items-center">
-            <Image src={tickIcon} alt="Tick" class="w-6 h-6 shrink-0" />
-            <p>+18M de tarjetas procesadas en la región</p>
-          </div>
-          
-          <div class="flex gap-1 items-center">
-            <Image src={tickIcon} alt="Tick" class="w-6 h-6 shrink-0" />
-            <p>Homologados para operar en 15 países de LATAM</p>
-          </div>
-          
-          <div class="flex gap-1 items-center">
-            <Image src={tickIcon} alt="Tick" class="w-6 h-6 shrink-0" />
-            <p>+170M transacciones mensuales</p>
-          </div>
-          
-          <div class="flex gap-1 items-center">
-            <Image src={tickIcon} alt="Tick" class="w-6 h-6 shrink-0" />
-            <p>+2.000M transacciones anuales</p>
-          </div>
-          
-          <div class="flex gap-1 items-center">
-            <Image src={tickIcon} alt="Tick" class="w-6 h-6 shrink-0" />
-            <p>4 data centers distribuidos en México, Estados Unidos y Argentina</p>
-          </div>
-          
-          <div class="flex gap-3 items-start mt-8 pt-8 border-t border-gray-600 w-11/24">
-            <Image src={globeIcon} alt="Globe" class="w-12 h-12 shrink-0 mt-1" />
-            <p>Oficinas comerciales en México, Ecuador y Argentina.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- Title -->
+  <div class="mb-16 text-center">
+    <h2 class="text-5xl font-bold">Nuestra presencia</h2>
   </div>
   
-  <!-- Cards section - absolutely positioned to overlap -->
-  <div class="absolute left-0 right-0 bottom-0 translate-y-7/8 px-8">
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="creden-cards">
-        <div class="flex justify-between items-center mb-6">
-          <h3 class="text-xl creden-azul">PROCESAMIENTO</h3>
-          <Image src={arrowIcon} alt="Arrow" class="w-16 h-16 shrink-0" />
-        </div>
-        <p class="creden-azul pr-4">Pagos rápidos y seguros en cada transacción digital. 99,9% de eficiencia operativa.</p>
-      </div>
-      
-      <div class="creden-cards">
-        <div class="flex justify-between items-center mb-6">
-          <h3 class="text-xl creden-azul">EMISIÓN</h3>
-          <Image src={arrowIcon} alt="Arrow" class="w-16 h-16 shrink-0" />
-        </div>
-        <p class="creden-azul pr-4">Ofrecemos tarjetas bajo licencia Mastercard, Visa, Carnet y propias, para gestionar gastos, fidelizar usuarios y sumarle valor al negocio.</p>
-      </div>
-      
-      <div class="creden-cards">
-        <div class="flex justify-between items-center mb-6">
-          <h3 class="text-xl creden-azul">ADQUIRENCIA</h3>
-          <Image src={arrowIcon} alt="Arrow" class="w-16 h-16 shrink-0" />
-        </div>
-        <p class="creden-azul pr-4">Desde transferencias instantáneas hasta pagos QR y contactless, ayudamos a reducir costos y mejorar el control financiero.</p>
-      </div>
+  <!-- Statistics Grid -->
+  <div class="grid grid-cols-3 gap-8">
+    
+    <!-- Card 1: +18M tarjetas -->
+    <div class="p-8 backdrop-blur-sm" style="background-color: rgba(60, 60, 60, 0.6); border: 1px solid rgba(100, 100, 100, 0.3); clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px)); display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto 1fr; gap: 1rem; min-height: 200px;">
+      <Image src={tarjetas} alt="Tarjeta" class="w-12 h-12 shrink-0" style="grid-column: 2; grid-row: 1;" />
+      <p class="text-5xl font-bold" style="grid-column: 1; grid-row: 1 / -1; align-self: center;">+18<span class="text-3xl">M</span></p>
+      <p class="text-sm text-gray-300" style="grid-column: 2; grid-row: 2; align-self: end;">de tarjetas procesadas en la región</p>
     </div>
+    
+    <!-- Card 2: 15 países -->
+    <div class="p-8 backdrop-blur-sm" style="background-color: rgba(60, 60, 60, 0.6); border: 1px solid rgba(100, 100, 100, 0.3); clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px)); display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto 1fr; gap: 1rem; min-height: 200px;">
+      <Image src={paises} alt="Globo" class="w-12 h-12 shrink-0" style="grid-column: 2; grid-row: 1;" />
+      <p class="text-5xl font-bold" style="grid-column: 1; grid-row: 1 / -1; align-self: center;">15</p>
+      <p class="text-sm text-gray-300" style="grid-column: 2; grid-row: 2; align-self: end;">países de LATAM donde estamos homologados</p>
+    </div>
+    
+    <!-- Card 3: +170M transacciones -->
+    <div class="p-8 backdrop-blur-sm" style="background-color: rgba(60, 60, 60, 0.6); border: 1px solid rgba(100, 100, 100, 0.3); clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px)); display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto 1fr; gap: 1rem; min-height: 200px;">
+      <Image src={transacciones} alt="Monitor" class="w-12 h-12 shrink-0" style="grid-column: 2; grid-row: 1;" />
+      <p class="text-5xl font-bold" style="grid-column: 1; grid-row: 1 / -1; align-self: center;">+170<span class="text-3xl">M</span></p>
+      <p class="text-sm text-gray-300" style="grid-column: 2; grid-row: 2; align-self: end;">transacciones mensuales</p>
+    </div>
+    
+    <!-- Card 4: +2B transacciones anuales -->
+    <div class="p-8 backdrop-blur-sm" style="background-color: rgba(60, 60, 60, 0.6); border: 1px solid rgba(100, 100, 100, 0.3); clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px)); display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto 1fr; gap: 1rem; min-height: 200px;">
+      <Image src={transacciones} alt="Dinero" class="w-12 h-12 shrink-0" style="grid-column: 2; grid-row: 1;" />
+      <p class="text-5xl font-bold" style="grid-column: 1; grid-row: 1 / -1; align-self: center;">+2<span class="text-3xl">B</span></p>
+      <p class="text-sm text-gray-300" style="grid-column: 2; grid-row: 2; align-self: end;">de transacciones anuales</p>
+    </div>
+    
+    <!-- Card 5: 4 data centers -->
+    <div class="p-8 backdrop-blur-sm" style="background-color: rgba(60, 60, 60, 0.6); border: 1px solid rgba(100, 100, 100, 0.3); clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px)); display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto 1fr; gap: 1rem; min-height: 200px;">
+      <Image src={dataCenter} alt="Servidor" class="w-12 h-12 shrink-0" style="grid-column: 2; grid-row: 1;" />
+      <p class="text-5xl font-bold" style="grid-column: 1; grid-row: 1 / -1; align-self: center;">4</p>
+      <p class="text-sm text-gray-300" style="grid-column: 2; grid-row: 2; align-self: end;">data centers distribuidos por México, Estados Unidos y Argentina</p>
+    </div>
+    
+    <!-- Card 6: 3 oficinas comerciales -->
+    <div class="p-8 backdrop-blur-sm" style="background-color: rgba(60, 60, 60, 0.6); border: 1px solid rgba(100, 100, 100, 0.3); clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px)); display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto 1fr; gap: 1rem; min-height: 200px;">
+      <Image src={oficinas} alt="Edificio" class="w-12 h-12 shrink-0" style="grid-column: 2; grid-row: 1;" />
+      <p class="text-5xl font-bold" style="grid-column: 1; grid-row: 1 / -1; align-self: center;">3</p>
+      <p class="text-sm text-gray-300" style="grid-column: 2; grid-row: 2; align-self: end;">oficinas comerciales en Ecuador, México y Argentina</p>
+    </div>
+    
   </div>
   
 </section>

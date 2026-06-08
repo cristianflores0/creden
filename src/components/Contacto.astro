@@ -1,85 +1,144 @@
----
-import { Image } from 'astro:assets';
----
-
-<section 
-  class="w-full py-8 relative"
+<section
+  class="relative w-full py-8"
   style="background-image: url('/assets/images/Fondo%20form.png'); background-size: cover; background-position: center;"
   id="contacto"
 >
-  <!-- Dark overlay -->
-  <div class="absolute inset-0 bg-black/60 pointer-events-none"></div>
+  <div class="pointer-events-none absolute inset-0 bg-black/60"></div>
 
   <div class="relative z-10">
     <div class="px-8 py-4">
-      <div class="w-11/12 mx-auto">
-        <div class="flex gap-0 items-stretch min-h-[480px]">
-          <!-- Left side: Text overlay -->
-          <div class="w-1/2 flex flex-col justify-center items-start pl-16">
+      <div class="mx-auto w-11/12">
+        <div class="flex min-h-[480px] items-stretch gap-0">
+          <div class="flex w-1/2 flex-col items-start justify-center pl-16">
             <div>
-              <h2 class="text-5xl text-white mb-4">Hablemos.</h2>
-              <p class="text-xl text-white">Construyamos una solución a tu medida.</p>
+              <h2 class="mb-4 text-5xl text-white">Hablemos.</h2>
+              <p class="text-xl text-white">Construyamos una solucion a tu medida.</p>
             </div>
           </div>
 
-          <!-- Right side: Form -->
-          <div class="w-1/2 px-16 py-1 flex flex-col justify-center creden-form-bg">
-            <h3 class="text-1x1 text-center text-white mb-4">Agenda una reunión con nuestro equipo</h3>
-        
-        <form class="space-y-2">
-          <input 
-            type="text" 
-            placeholder="Nombre*" 
-            required
-            class="w-full creden-form-input border-b border-gray-400 text-white placeholder-gray-300 pb-3 focus:outline-none focus:border-creden-green"
-          />
-          <input 
-            type="text" 
-            placeholder="Apellido*" 
-            required
-            class="w-full creden-form-input border-b border-gray-400 text-white placeholder-gray-300 pb-3 focus:outline-none focus:border-creden-green"
-          />
+          <div class="creden-form-bg flex w-1/2 flex-col justify-center px-16 py-6">
+            <h3 class="mb-4 text-center text-white">Agenda una reunion con nuestro equipo</h3>
 
-          <input 
-            type="email" 
-            placeholder="Email*" 
-            required
-            class="w-full creden-form-input border-b border-gray-400 text-white placeholder-gray-300 pb-3 focus:outline-none focus:border-creden-green"
-          />
-
-          <input 
-            type="text" 
-            placeholder="País*" 
-            required
-            class="w-full creden-form-input border-b border-gray-400 text-white placeholder-gray-300 pb-3 focus:outline-none focus:border-creden-green"
-          />
-
-          <input 
-            type="text" 
-            placeholder="Empresa*" 
-            required
-            class="w-full creden-form-input border-b border-gray-400 text-white placeholder-gray-300 pb-3 focus:outline-none focus:border-creden-green"
-          />
-
-          <textarea 
-            placeholder="¿Qué solución podemos ofrecerle a tu negocio?*" 
-            required
-            rows="4"
-            class="w-full creden-form-input border-b border-gray-400 text-white placeholder-gray-300 pb-3 focus:outline-none focus:border-creden-green resize-none"
-          ></textarea>
-
-          <div class="pt-3">
-            <button 
-              type="submit"
-              class="w-2/6 creden-form-btn text-white py-1 rounded-4xl hover:opacity-90 transition-opacity"
+            <form
+              id="contact-form"
+              class="space-y-2"
+              action="https://formspree.io/f/xzdykypp"
+              method="POST"
             >
-              Enviar
-            </button>
-          </div>
-        </form>
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Nombre*"
+                required
+                class="creden-form-input w-full border-b border-gray-400 pb-3 text-white placeholder-gray-300 focus:border-creden-green focus:outline-none"
+              />
+              <input
+                type="text"
+                name="apellido"
+                placeholder="Apellido*"
+                required
+                class="creden-form-input w-full border-b border-gray-400 pb-3 text-white placeholder-gray-300 focus:border-creden-green focus:outline-none"
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email*"
+                required
+                class="creden-form-input w-full border-b border-gray-400 pb-3 text-white placeholder-gray-300 focus:border-creden-green focus:outline-none"
+              />
+
+              <input
+                type="text"
+                name="pais"
+                placeholder="Pais*"
+                required
+                class="creden-form-input w-full border-b border-gray-400 pb-3 text-white placeholder-gray-300 focus:border-creden-green focus:outline-none"
+              />
+
+              <input
+                type="text"
+                name="empresa"
+                placeholder="Empresa*"
+                required
+                class="creden-form-input w-full border-b border-gray-400 pb-3 text-white placeholder-gray-300 focus:border-creden-green focus:outline-none"
+              />
+
+              <textarea
+                name="mensaje"
+                placeholder="Que solucion podemos ofrecerle a tu negocio?*"
+                required
+                rows="4"
+                class="creden-form-input w-full resize-none border-b border-gray-400 pb-3 text-white placeholder-gray-300 focus:border-creden-green focus:outline-none"
+              ></textarea>
+
+              <input type="hidden" name="_subject" value="Nuevo contacto desde Credencial Web" />
+
+              <p
+                id="contact-form-status"
+                class="min-h-6 text-sm text-white/90"
+                aria-live="polite"
+              ></p>
+
+              <div class="pt-3">
+                <button
+                  id="contact-form-submit"
+                  type="submit"
+                  class="creden-form-btn w-2/6 rounded-4xl py-1 text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  Enviar
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script is:inline>
+  const form = document.querySelector('#contact-form');
+  const status = document.querySelector('#contact-form-status');
+  const submitButton = document.querySelector('#contact-form-submit');
+
+  if (form instanceof HTMLFormElement && status instanceof HTMLElement && submitButton instanceof HTMLButtonElement) {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      status.textContent = 'Enviando mensaje...';
+      status.classList.remove('text-red-300', 'text-green-300');
+      submitButton.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: {
+            Accept: 'application/json'
+          }
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          const errorMessage = Array.isArray(data.errors) && data.errors.length > 0
+            ? data.errors.map((item) => item.message).join(' ')
+            : 'No pudimos enviar el formulario.';
+
+          throw new Error(errorMessage);
+        }
+
+        form.reset();
+        status.textContent = 'Gracias por escribirnos. Te responderemos pronto.';
+        status.classList.add('text-green-300');
+      } catch (error) {
+        const message = error instanceof Error ? error.message : 'Ocurrio un error inesperado.';
+        status.textContent = message;
+        status.classList.add('text-red-300');
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
+  }
+</script>
