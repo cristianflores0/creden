@@ -1,34 +1,231 @@
 ---
 import { Image } from 'astro:assets';
-import tickIcon from '../assets/icons/Tick verde.svg';
+import heroImage from '../assets/images/Imagen Hero.png';
 ---
 
-<section class="w-full text-left flex items-center justify-start creden-hero" style="background-image: url('/assets/images/Imagen Hero.png');">
-    <h1 class="px-6 creden-h1">
-      <span class="text-white">Brindamos servicios</span>
-      <br />
-      <span class="creden-green">de pagos digitales</span>
-    </h1>
-  </div>
-</section>
-
-<div class="creden-bg-negro">
-  <section class="py-12 px-8 text-center bg-white rounded-2xl">
-    <p class="text-gray-600 mb-6 text-lg">Hace más de 45 años desarrollamos plataformas de procesamiento, emisión y adquirencia en medios de pago.</p>
-    <div class="mx-auto w-9-cols">
-      <p class="text-gray-700 text-lg mb-6">Operación regional escalable, licencias activas en múltiples países y soluciones para clientes B2B bajo estándares de seguridad internacionales.</p>
+<section class="dark-band pt-28 md:pt-32">
+  <div class="content grid min-h-[575px] items-start gap-10 pb-20 pt-14 md:grid-cols-[.9fr_1.1fr] md:pt-20">
+    <div class="max-w-[450px] pt-7">
+      <h1 class="text-[38px] font-semibold leading-[1.05] text-white md:text-[54px]">
+        Soluciones<br />
+        de pago <span class="text-[var(--blue)]">B2B</span>
+      </h1>
+      <p class="mt-6 max-w-[370px] text-[17px] leading-tight text-white">
+        Pagos B2B simples y escalables con licencias activas y estándar internacional.
+      </p>
     </div>
-  </section>
-</div>
 
-<section class="w-full py-4 px-8 text-center creden-bg-negro text-white">
-  <div class="flex items-center justify-center gap-40">
-    <Image src={tickIcon} alt="Tick" class="w-6 h-6" />
-    <p class="text-lg">
-      <span class="creden-green">Cocreamos soluciones junto a nuestros clientes,</span>
-      <br />
-      acompañándolos de punta a punta <span class="creden-green">para cubrir necesidades reales</span>.
-    </p>
-    <Image src={tickIcon} alt="Tick" class="w-6 h-6" />
+    <div class="relative">
+      <Image src={heroImage} alt="Soluciones de pago B2B" class="ml-auto h-[248px] w-full max-w-[620px] rounded-[6px] object-cover md:h-[360px]" loading="eager" />
+      <a href="#contacto" class="absolute -bottom-6 left-1/2 inline-flex -translate-x-1/2 items-center justify-center rounded-[4px] bg-[var(--blue)] px-10 py-4 text-[13px] font-medium text-white shadow-[0_10px_24px_rgba(27,101,255,.45)] transition hover:brightness-110">
+        Asesórate
+      </a>
+    </div>
+  </div>
+
+  <div class="content pb-20 text-center" data-solutions-carousel>
+    <h2 class="mb-9 text-[25px] font-medium text-[#bfc0c6]">Conoce nuestras soluciones</h2>
+
+    <div class="solution-carousel" aria-live="polite">
+      <article class="solution-card" data-solution-card data-index="0">
+        <div class="flex items-center justify-between">
+          <h3>Emisión</h3>
+          <span aria-hidden="true">→</span>
+        </div>
+        <p>Tarjetas físicas y virtuales con control financiero integral.</p>
+      </article>
+
+      <article class="solution-card" data-solution-card data-index="1">
+        <div class="flex items-center justify-between">
+          <h3>Procesamiento</h3>
+          <span aria-hidden="true">→</span>
+        </div>
+        <p>Pagos rápidos y seguros en cada transacción digital, 99,9% de eficiencia operativa.</p>
+      </article>
+
+      <article class="solution-card" data-solution-card data-index="2">
+        <div class="flex items-center justify-between">
+          <h3>Adquirencia</h3>
+          <span aria-hidden="true">→</span>
+        </div>
+        <p>Control en tiempo real para comercios y operaciones.</p>
+      </article>
+    </div>
+
+    <div class="mt-7 flex justify-center gap-2" role="tablist" aria-label="Soluciones">
+      <button class="solution-dot" type="button" data-solution-dot data-index="0" aria-label="Ver Emisión"></button>
+      <button class="solution-dot" type="button" data-solution-dot data-index="1" aria-label="Ver Procesamiento"></button>
+      <button class="solution-dot" type="button" data-solution-dot data-index="2" aria-label="Ver Adquirencia"></button>
+    </div>
   </div>
 </section>
+
+<style>
+  .solution-carousel {
+    display: grid;
+    grid-template-columns: 1fr 1.22fr 1fr;
+    align-items: center;
+    gap: 20px;
+    transition: grid-template-columns .34s ease;
+  }
+
+  .solution-carousel.active-0 {
+    grid-template-columns: 1.22fr 1fr 1fr;
+  }
+
+  .solution-carousel.active-1 {
+    grid-template-columns: 1fr 1.22fr 1fr;
+  }
+
+  .solution-carousel.active-2 {
+    grid-template-columns: 1fr 1fr 1.22fr;
+  }
+
+  .solution-card {
+    position: relative;
+    min-height: 160px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 10px;
+    background: #101010;
+    color: white;
+    text-align: left;
+    opacity: .55;
+    filter: blur(1px);
+    z-index: 1;
+    transform: translateY(0) scale(.96);
+    box-shadow: 0 0 34px rgba(27, 101, 255, .55);
+    transition: min-height .34s ease, padding .34s ease, opacity .34s ease, filter .34s ease, transform .34s ease, box-shadow .34s ease, border-color .34s ease, background-color .34s ease;
+  }
+
+  .solution-card h3 {
+    margin: 0;
+    color: var(--blue);
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .solution-card span {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border: 1px solid white;
+    border-radius: 999px;
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  .solution-card p {
+    margin: 28px 0 0;
+    color: rgba(255, 255, 255, .82);
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .solution-card.is-active {
+    min-height: 228px;
+    padding: 36px;
+    border-color: var(--blue);
+    border-radius: 12px;
+    background: #080808;
+    opacity: 1;
+    filter: none;
+    z-index: 5;
+    transform: translateY(-14px) scale(1.06);
+    box-shadow: 0 0 44px rgba(27, 101, 255, .78);
+  }
+
+  .solution-card.is-active h3 {
+    font-size: 22px;
+  }
+
+  .solution-card.is-active span {
+    width: 48px;
+    height: 48px;
+    font-size: 26px;
+  }
+
+  .solution-card.is-active p {
+    max-width: 360px;
+    margin-top: 40px;
+    color: white;
+    font-size: 16px;
+  }
+
+  .solution-dot {
+    width: 12px;
+    height: 12px;
+    border: 0;
+    border-radius: 999px;
+    background: #92939b;
+    cursor: pointer;
+    transition: transform .2s ease, background-color .2s ease;
+  }
+
+  .solution-dot:hover,
+  .solution-dot:focus-visible {
+    transform: scale(1.25);
+    outline: none;
+  }
+
+  .solution-dot.is-active {
+    background: white;
+  }
+
+  @media (max-width: 767px) {
+    .solution-carousel {
+      grid-template-columns: 1fr;
+    }
+
+    .solution-card {
+      display: none;
+    }
+
+    .solution-card.is-active {
+      display: block;
+      transform: translateY(0) scale(1);
+    }
+  }
+</style>
+
+<script is:inline>
+  const carousel = document.querySelector('[data-solutions-carousel]');
+
+  if (carousel instanceof HTMLElement) {
+    const cards = Array.from(carousel.querySelectorAll('[data-solution-card]'));
+    const dots = Array.from(carousel.querySelectorAll('[data-solution-dot]'));
+    const track = carousel.querySelector('.solution-carousel');
+    let activeIndex = 1;
+
+    const updateCarousel = (nextIndex) => {
+      activeIndex = nextIndex;
+
+      if (track instanceof HTMLElement) {
+        track.classList.remove('active-0', 'active-1', 'active-2');
+        track.classList.add(`active-${activeIndex}`);
+      }
+
+      cards.forEach((card) => {
+        const index = Number(card.getAttribute('data-index'));
+        card.classList.toggle('is-active', index === activeIndex);
+      });
+
+      dots.forEach((dot) => {
+        const index = Number(dot.getAttribute('data-index'));
+        const isActive = index === activeIndex;
+
+        dot.classList.toggle('is-active', isActive);
+        dot.setAttribute('aria-selected', String(isActive));
+      });
+    };
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        updateCarousel(Number(dot.getAttribute('data-index')));
+      });
+    });
+
+    updateCarousel(activeIndex);
+  }
+</script>

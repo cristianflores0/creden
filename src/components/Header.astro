@@ -3,19 +3,18 @@ import { Image } from 'astro:assets';
 import logoImage from '../assets/logos/Recurso 3.png';
 ---
 
-<header class="flex items-center justify-between px-6 py-4 shadow-sm sticky top-0 z-50 bg-white">
-  <!-- Logo -->
-  <a href="/" class="pl-12 hover:opacity-80 transition-opacity" aria-label="Home">
-    <Image src={logoImage} alt="Credencial Logo" class="h-10" loading="lazy" />
-  </a>
+<header class="fixed left-1/2 top-3 z-50 w-[calc(100%-28px)] max-w-[1390px] -translate-x-1/2 rounded-[5px] border border-black/80 bg-white shadow-[0_2px_8px_rgba(0,0,0,.18)]">
+  <div class="flex h-16 items-center justify-between px-7 md:px-12">
+    <a href="/" class="flex items-center transition-opacity hover:opacity-80" aria-label="Credencial">
+      <Image src={logoImage} alt="Credencial" class="h-7 w-auto" loading="eager" />
+    </a>
 
-  <!-- Nav -->
-  <nav class="hidden md:flex gap-12 text-sm pr-12">
-    <a href="#procesamiento" class="hover:text-blue-600">Procesamiento</a>
-    <a href="#emision" class="hover:text-blue-600">Emisión</a>
-    <a href="#adquirencia" class="hover:text-blue-600">Adquirencia</a>
-    <a href="#nosotros" class="hover:text-blue-600">Nosotros</a>
-    <a href="#contacto" class="hover:text-blue-600">Contacto</a>
-  </nav>
-
+    <nav class="hidden items-center gap-11 text-[12px] text-[#222] md:flex">
+      <a href="#procesamiento" class="hover:text-[var(--blue)]">Procesamiento</a>
+      <a href="#emision" class="hover:text-[var(--blue)]">Emisión</a>
+      <a href="#adquirencia" class="hover:text-[var(--blue)]">Adquirencia</a>
+      <a href="#nosotros" class="hover:text-[var(--blue)]">Nosotros</a>
+      <a href="#contacto" class="hover:text-[var(--blue)]">Contacto</a>
+    </nav>
+  </div>
 </header>

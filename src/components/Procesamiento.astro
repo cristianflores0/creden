@@ -11,102 +11,64 @@ import iconSAT from '../assets/icons/SAT.png';
 import iconArgentina from '../assets/icons/Banco Central Republica Argentina.png';
 import iconUruguay from '../assets/icons/Banco Central del Uruguay.png';
 import iconEcuador from '../assets/icons/Banco Central del Ecuador.png';
+import fondo from '../assets/images/Fondo Procesamiento.png';
 ---
 
-<section class="w-full bg-gray-100 py-16 mt-48" id="procesamiento">
-  <!-- Header section with title and image -->
-  <div class="w-11/12 mx-auto mb-12 py-12" style="background-image: url('/assets/images/Fondo Procesamiento.png'); background-size: cover; background-position: center;">
-    <div class="flex gap-12 items-center">
-      <div class="w-2/3 pl-12 pt-8">
-        <h2 class="text-3xl mb-4 text-white creden-espaciado">PROCESAMIENTO 365</h2>
-        <p class="text-white mb-6">Acreditación de cobros con tarjeta en el día, los 365 días del año.</p>
-      </div>
-      <div class="w-1/2">
-        <!-- Image will be added here -->
+<section class="section-band" id="procesamiento">
+  <div class="content section-panel">
+    <div class="photo-heading rounded-b-none" style={`--heading-image: url('${fondo.src}')`}>
+      <div>
+        <h2 class="section-title">Procesamiento 365</h2>
+        <p class="m-0 text-[14px] text-white">Acreditación de cobros con tarjeta en el día, los 365 días del año.</p>
       </div>
     </div>
-  </div>
 
-  <!-- Efficiency badge -->
-  <div class="flex justify-center mb-4">
-    <p class="text-gray-600 text-center">Pagos rápidos y seguros en transacciones nacionales e internacionales con</p>
-  </div>
-  <div class="flex justify-center mb-12">
-    <div class="bg-blue-500/40 text-white px-6 rounded-full flex items-center relative">
-      <span class="bg-blue-500 text-xl px-8 py-1 rounded-full -ml-6 creden-poppins">99,9%</span>
-      <span class="text-lg ml-2 creden-poppins">Eficiencia operativa</span>
-    </div>
-  </div>
-
-  <!-- Features grid -->
-  <div class="px-8 mb-16">
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white p-8 rounded-lg shadow-sm flex gap-6">
-        <div class="shrink-0">
-          <Image src={iconProcesamiento} alt="Procesamiento" class="w-12 h-12" />
-        </div>
-        <div>
-          <p class="text-gray-700">Procesamiento de transacciones nacionales e internacionales.</p>
-        </div>
+    <div class="bg-[var(--soft)] px-6 pb-10 pt-7 md:px-16 md:pb-12 md:pt-8">
+      <p class="mb-2 text-center text-[14px] text-[#85868c]">
+        Pagos rápidos y seguros en transacciones nacionales e internacionales con
+      </p>
+      <div class="pill-row mb-12">
+        <span class="blue-pill"><strong>99,9%</strong> Eficiencia operativa</span>
       </div>
 
-      <div class="bg-white p-8 rounded-lg shadow-sm flex gap-6">
-        <div class="shrink-0">
-          <Image src={iconMonitoreo} alt="Monitoreo" class="w-12 h-12" />
-        </div>
-        <div>
-          <p class="text-gray-700">Monitoreo en tiempo real de compras y operaciones.</p>
-        </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <Image src={iconProcesamiento} alt="" aria-hidden="true" />
+          <p>Procesamiento de transacciones nacionales e internacionales.</p>
+        </article>
+        <article class="feature-card">
+          <Image src={iconMonitoreo} alt="" aria-hidden="true" />
+          <p>Monitoreo en tiempo real de compras y operaciones.</p>
+        </article>
+        <article class="feature-card">
+          <Image src={iconScoring} alt="" aria-hidden="true" />
+          <p>Scoring crediticio inteligente para evaluar solvencia y riesgo.</p>
+        </article>
+        <article class="feature-card">
+          <Image src={iconGestion} alt="" aria-hidden="true" />
+          <p>Gestión y autorización de pagos con máxima eficiencia.</p>
+        </article>
       </div>
 
-      <div class="bg-white p-8 rounded-lg shadow-sm flex gap-6">
-        <div class="shrink-0">
-          <Image src={iconScoring} alt="Scoring" class="w-12 h-12" />
-        </div>
-        <div>
-          <p class="text-gray-700">Scoring crediticio inteligente para evaluar solvencia y riesgo.</p>
-        </div>
+      <div class="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+        <Image src={iconPCI} alt="PCI DSS" class="h-10 w-auto object-contain" />
+        <Image src={iconIsae} alt="ISAE 3402" class="h-10 w-auto object-contain" />
+        <Image src={iconCNBV} alt="CNBV" class="h-10 w-auto object-contain" />
+        <Image src={iconSAT} alt="SAT" class="h-10 w-auto object-contain" />
+        <Image src={iconArgentina} alt="Banco Central República Argentina" class="h-10 w-auto object-contain" />
+        <Image src={iconUruguay} alt="Banco Central del Uruguay" class="h-10 w-auto object-contain" />
+        <Image src={iconEcuador} alt="Banco Central del Ecuador" class="h-10 w-auto object-contain" />
       </div>
 
-      <div class="bg-white p-8 rounded-lg shadow-sm flex gap-6">
-        <div class="shrink-0">
-          <Image src={iconGestion} alt="Gestión" class="w-12 h-12" />
-        </div>
-        <div>
-          <p class="text-gray-700">Gestión y autorización de pagos con máxima eficiencia.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+      <p class="mx-auto mt-8 max-w-[990px] text-center text-[13px] leading-snug text-[#6c6d73]">
+        Somos una compañía regulada por los bancos centrales y entes reguladores en los países donde operamos.
+      </p>
 
-  <!-- Certifications/Logos section -->
-  <div class="px-8 py-6 mb-2">
-    <div class="w-11/12 mx-auto mb-8 flex justify-center items-center gap-10 flex-wrap">
-      <Image src={iconPCI} alt="PCI" class="h-12 w-auto max-w-[180px]" />
-      <Image src={iconIsae} alt="ISAE" class="h-12 w-auto max-w-[180px]" />
-      <Image src={iconCNBV} alt="CNBV" class="h-12 w-auto max-w-[180px]" />
-      <Image src={iconSAT} alt="SAT" class="h-12 w-auto max-w-[180px]" />
-      <Image src={iconArgentina} alt="Argentina" class="h-12 w-auto max-w-[180px]" />
-      <Image src={iconUruguay} alt="Uruguay" class="h-12 w-auto max-w-[180px]" />
-      <Image src={iconEcuador} alt="Ecuador" class="h-12 w-auto max-w-[180px]" />
-    </div>
-    <p class="text-center text-gray-600 text-sm mb-8">Somos una compañía regulada por los bancos centrales y entes reguladores en los países donde operamos.</p>
-  </div>
-
-  <!-- Footer cards -->
-  <div class="px-8">
-    <div class="grid md:grid-cols-4 gap-6">
-      <div class="text-white p-8 rounded-lg text-center" style="background-color: #1e1e1d;">
-        <h3>Cumplimiento de normativas</h3>
-      </div>
-      <div class="text-white p-8 rounded-lg text-center" style="background-color: #1e1e1d;">
-        <h3>Certificaciones locales e internacionales</h3>
-      </div>
-      <div class="text-white p-8 rounded-lg text-center px-20" style="background-color: #1e1e1d;">
-        <h3>Planes de contingencia</h3>
-      </div>
-      <div class="text-white p-8 rounded-lg text-center px-18 bg-creden-green">
-        <h3>Resguardo de datos sensibles</h3>
+      <div class="mt-9 grid gap-4 md:grid-cols-4">
+        <div class="rounded-[4px] bg-[#101011] px-5 py-5 text-center text-[13px] font-medium text-white">Cumplimiento<br />de normativas</div>
+        <div class="rounded-[4px] bg-[#101011] px-5 py-5 text-center text-[13px] font-medium text-white">Certificaciones locales<br />e internacionales</div>
+        <div class="rounded-[4px] bg-[#101011] px-5 py-5 text-center text-[13px] font-medium text-white">Planes de<br />contingencia</div>
+        <div class="rounded-[4px] bg-[var(--green)] px-5 py-5 text-center text-[13px] font-medium text-white">Resguardo de<br />datos sensibles</div>
       </div>
     </div>
   </div>

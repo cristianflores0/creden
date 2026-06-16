@@ -1,130 +1,287 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --creden-green: #59ce91;
-  --creden-azul: #23246c;
+  --blue: #1b65ff;
+  --navy: #25206f;
+  --green: #5fd696;
+  --ink: #121213;
+  --soft: #f0f0f0;
+  --muted: #66666a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #101011;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-width: 320px;
+  background: var(--soft);
+  color: #202124;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
 }
 
-.creden-green {
-  color: var(--creden-green);
+img {
+  display: block;
 }
 
-.bg-creden-green {
-  background-color: var(--creden-green);
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.creden-azul {
-  color: var(--creden-azul);
+.page-shell {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--soft);
 }
 
-.bg-creden-azul {
-  background-color: var(--creden-azul);
+.content {
+  width: min(100% - 64px, 1320px);
+  margin-inline: auto;
 }
 
-.border-creden-azul {
-  border-color: var(--creden-azul);
+.narrow {
+  width: min(100% - 128px, 1180px);
+  margin-inline: auto;
 }
 
-.creden-bg-negro {
-  background-color: #1e1e1d;
+.dark-band {
+  background: #101011;
+  color: white;
 }
 
-.creden-box-rounded {
-  border-radius: 40px 10px 40px 10px;
+.section-band {
+  padding: 56px 0;
+  background: var(--soft);
 }
 
-.w-1-cols {
-  width: 8.333%;
+.section-panel {
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--soft);
 }
 
-.w-2-cols {
-  width: 16.666%;
+.photo-heading {
+  position: relative;
+  min-height: 176px;
+  display: flex;
+  align-items: center;
+  padding: 42px 64px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #111;
+  color: white;
 }
 
-.w-3-cols {
-  width: 25%;
-}
-
-.w-4-cols {
-  width: 33.333%;
-}
-
-.w-5-cols {
-  width: 41.666%;
-}
-
-.w-6-cols {
-  width: 50%;
-}
-
-.w-7-cols {
-  width: 58.333%;
-}
-
-.w-8-cols {
-  width: 66.666%;
-}
-
-.w-9-cols {
-  width: 75%;
-}
-
-.w-10-cols {
-  width: 83.333%;
-}
-
-.w-11-cols {
-  width: 91.666%;
-}
-
-.w-12-cols {
-  width: 100%;
-}
-
-.creden-hero {
-  height: 500px;
+.photo-heading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(12, 12, 12, .98) 0%, rgba(12, 12, 12, .88) 34%, rgba(12, 12, 12, .14) 100%), var(--heading-image);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
-.creden-h1 {
-  font-family: Poppins, sans-serif;
-  font-size: 48pt;
-  font-weight: 400;
-  line-height: 1.2;
+.photo-heading > * {
+  position: relative;
+  z-index: 1;
 }
 
-.creden-cards {
-  background-color: white;
-  border: 2px solid var(--creden-azul);
-  padding: 1rem 1rem 3rem 1rem;
-  border-radius: 1rem;
+.section-title {
+  margin: 0 0 12px;
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: .12em;
 }
 
-.creden-espaciado {
-  letter-spacing: 0.44em;
-  font-family: 'Myriad Pro', sans-serif;
+.section-copy {
+  color: #66666a;
+  font-size: 15px;
+  line-height: 1.55;
 }
 
-.creden-poppins {
-  font-family: 'Poppins', sans-serif;
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
-/* Form Styles */
-.creden-form-bg {
-  background-color: #1d1f10;
+.feature-card {
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 24px;
+  border-radius: 6px;
+  background: white;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
 }
 
-.creden-form-input {
-  background-color: #2F3123;
+.feature-card h3 {
+  margin: 0 0 5px;
+  color: #55565b;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.creden-form-btn {
-  background-color: #2B72FF;
+.feature-card p,
+.feature-card li {
+  margin: 0;
+  color: #62636a;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.feature-card img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.pill-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.blue-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 4px 18px;
+  border-radius: 999px;
+  background: rgba(27, 101, 255, .25);
+  color: var(--blue);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.blue-pill strong {
+  margin: -4px 10px -4px -18px;
+  padding: 5px 18px;
+  border-radius: 999px;
+  background: var(--blue);
+  color: white;
+}
+
+.logo-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.logo-strip img {
+  max-width: 120px;
+  height: 42px;
+  object-fit: contain;
+  padding: 8px 12px;
+  border-radius: 3px;
+  background: white;
+}
+
+.cut-card {
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+
+@media (max-width: 900px) {
+  .content,
+  .narrow {
+    width: min(100% - 28px, 680px);
+  }
+
+  .section-band {
+    padding: 34px 0;
+  }
+
+  .photo-heading {
+    min-height: 132px;
+    padding: 30px 24px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    letter-spacing: .08em;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 14px;
+  }
+
+  .content,
+  .narrow {
+    width: min(100% - 20px, 390px);
+  }
+
+  .section-band {
+    padding: 22px 0;
+  }
+
+  .feature-card {
+    min-height: auto;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .feature-card img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .logo-strip {
+    gap: 8px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  .logo-strip img {
+    max-width: 80px;
+    height: 30px;
+    padding: 5px 8px;
+  }
 }
