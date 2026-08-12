@@ -84,7 +84,7 @@ a {
 }
 
 .section-band {
-  padding: 56px 0;
+  padding: 0 0 56px 0;
   background: var(--soft);
 }
 
@@ -130,7 +130,7 @@ a {
 
 .section-copy {
   color: #66666a;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.55;
 }
 
@@ -144,25 +144,26 @@ a {
   min-height: 105px;
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 22px 24px;
-  border-radius: 6px;
+  gap: 5px;
+  padding: 22px 50px;
+  border-radius: 20px;
   background: white;
   box-shadow: 0 8px 18px rgba(0, 0, 0, .08);
 }
 
 .feature-card h3 {
-  margin: 0 0 5px;
+  margin: 0 0 5px !important;
   color: #55565b;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 21px;
+  font-weight: 300;
 }
 
 .feature-card p,
 .feature-card li {
   margin: 0;
-  color: #62636a;
-  font-size: 13px;
+  color: #55565b;
+  font-size: 17px;
+  font-weight: 100;
   line-height: 1.35;
 }
 
@@ -188,7 +189,7 @@ a {
   padding: 4px 18px;
   border-radius: 999px;
   background: rgba(27, 101, 255, .25);
-  color: var(--blue);
+  color: white;
   font-size: 19px;
   font-weight: 500;
 }
@@ -199,6 +200,20 @@ a {
   border-radius: 999px;
   background: var(--blue);
   color: white;
+}
+
+/* Wider, centered pills used in the Emisión section */
+.pill-wide {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top:5px;
+  padding-bottom:5px;
+  min-width: 128px; /* makes the pills visibly wider */
+  min-height: 36px; /* shorter, compact height */
+  gap: 8px;
 }
 
 .logo-strip {
@@ -229,7 +244,7 @@ a {
   }
 
   .section-band {
-    padding: 34px 0;
+    padding: 0 0 34px 0;
   }
 
   .photo-heading {
@@ -258,7 +273,7 @@ a {
   }
 
   .section-band {
-    padding: 22px 0;
+    padding: 0 0 22px 0;
   }
 
   .feature-card {
@@ -283,5 +298,12 @@ a {
     max-width: 80px;
     height: 30px;
     padding: 5px 8px;
+  }
+
+  /* Reduce pill width on small screens */
+  .pill-wide {
+    padding-left: 12px;
+    padding-right: 12px;
+    min-width: 84px;
   }
 }

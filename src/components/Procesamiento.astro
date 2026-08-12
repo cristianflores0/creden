@@ -11,18 +11,10 @@ import iconSAT from '../assets/icons/SAT.png';
 import iconArgentina from '../assets/icons/Banco Central Republica Argentina.png';
 import iconUruguay from '../assets/icons/Banco Central del Uruguay.png';
 import iconEcuador from '../assets/icons/Banco Central del Ecuador.png';
-import fondo from '../assets/images/Fondo Procesamiento.png';
 ---
 
 <section class="section-band" id="procesamiento">
-  <div class="content section-panel">
-    <div class="photo-heading rounded-b-none" style={`--heading-image: url('${fondo.src}')`}>
-      <div>
-        <h2 class="section-title">Procesamiento 365</h2>
-        <p class="m-0 text-[14px] text-white">Acreditación de cobros con tarjeta en el día, los 365 días del año.</p>
-      </div>
-    </div>
-
+  <div class="content section-panel rounded-t-none">
     <div class="bg-[var(--soft)] px-6 pb-10 pt-7 md:px-16 md:pb-12 md:pt-8">
       <p class="mb-2 text-center text-[14px] text-[#85868c]">
         Pagos rápidos y seguros en transacciones nacionales e internacionales con
@@ -50,17 +42,17 @@ import fondo from '../assets/images/Fondo Procesamiento.png';
         </article>
       </div>
 
-      <div class="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-        <Image src={iconPCI} alt="PCI DSS" class="h-10 w-auto object-contain" />
-        <Image src={iconIsae} alt="ISAE 3402" class="h-10 w-auto object-contain" />
-        <Image src={iconCNBV} alt="CNBV" class="h-10 w-auto object-contain" />
-        <Image src={iconSAT} alt="SAT" class="h-10 w-auto object-contain" />
-        <Image src={iconArgentina} alt="Banco Central República Argentina" class="h-10 w-auto object-contain" />
-        <Image src={iconUruguay} alt="Banco Central del Uruguay" class="h-10 w-auto object-contain" />
-        <Image src={iconEcuador} alt="Banco Central del Ecuador" class="h-10 w-auto object-contain" />
+      <div class="mt-12 -mx-6 md:-mx-16 px-6 md:px-16 grid grid-cols-7 gap-6 items-center">
+        <Image src={iconPCI} alt="PCI DSS" class="h-16 w-auto object-contain" />
+        <Image src={iconIsae} alt="ISAE 3402" class="h-16 w-auto object-contain" />
+        <Image src={iconCNBV} alt="CNBV" class="h-16 w-auto object-contain" />
+        <Image src={iconSAT} alt="SAT" class="h-16 w-auto object-contain" />
+        <Image src={iconArgentina} alt="Banco Central República Argentina" class="h-16 w-auto object-contain" />
+        <Image src={iconUruguay} alt="Banco Central del Uruguay" class="h-16 w-auto object-contain" />
+        <Image src={iconEcuador} alt="Banco Central del Ecuador" class="h-16 w-auto object-contain" />
       </div>
 
-      <p class="mx-auto mt-8 max-w-[990px] text-center text-[13px] leading-snug text-[#6c6d73]">
+      <p class="mt-8 text-center text-[19px] leading-snug text-[#6c6d73]">
         Somos una compañía regulada por los bancos centrales y entes reguladores en los países donde operamos.
       </p>
 
@@ -73,3 +65,4 @@ import fondo from '../assets/images/Fondo Procesamiento.png';
     </div>
   </div>
 </section>
+

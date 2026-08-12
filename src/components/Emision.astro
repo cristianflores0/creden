@@ -3,7 +3,11 @@ import { Image } from 'astro:assets';
 import fondo from '../assets/images/-Imagen Emisión-.png';
 import emisionIzq from '../assets/images/Emision Imagen Izquierda.png';
 import emisionDer from '../assets/images/Emision Imagen Derecha.png';
-import card from '../assets/images/card.png';
+import tarjetasEmision from '../assets/images/Tarjetas Emision.png';
+import mastercardLogo from '../assets/logos/Mastercard Logo.png';
+import visaLogo from '../assets/logos/Visa Logo.png';
+import carnetLogo from '../assets/logos/Carnet Logo.png';
+import credencialLogo from '../assets/logos/Credencial Logo.png';
 ---
 
 <section class="section-band pt-0" id="emision">
@@ -13,43 +17,43 @@ import card from '../assets/images/card.png';
     </div>
 
     <div class="px-6 py-10 md:px-16">
-      <p class="mx-auto mb-8 max-w-[1110px] text-center text-[13px] leading-snug text-[#686970]">
-        Ofrecemos tarjetas físicas y/o virtuales bajo licencia Mastercard, Visa, Carnet o marca privada, con opción de BIN Sponsorship propio para que cada cliente gestione y administre según sus objetivos comerciales, y potencie el control de sus gastos.
+      <p class="mx-auto mb-8 max-w-[1110px] text-center text-[20px] leading-snug text-[#686970]">
+        Ofrecemos tarjetas físicas y/o virtuales bajo licencia Mastercard, Visa, Carnet o marca privada, con opción de BIN Sponsorship propio para <strong>que cada cliente gestione y administre según sus objetivos comerciales</strong>, y potencie el control de sus gastos.
       </p>
 
-      <div class="mb-8 flex justify-center gap-3">
-        <span class="h-6 w-10 rounded-full bg-[#eb001b]"></span>
-        <span class="h-6 w-10 rounded-full bg-[#f79e1b]"></span>
-        <span class="h-6 w-10 rounded-full bg-[#1a4aa7]"></span>
-        <span class="h-6 w-10 rounded-full bg-[#24b46b]"></span>
+      <div class="mb-8 flex flex-wrap items-center justify-center gap-5">
+        <Image src={mastercardLogo} alt="Mastercard" class="h-auto w-15 object-contain" loading="lazy" />
+        <Image src={visaLogo} alt="Visa" class="h-auto w-15 object-contain" loading="lazy" />
+        <Image src={carnetLogo} alt="Carnet" class="h-auto w-15 object-contain" loading="lazy" />
+        <Image src={credencialLogo} alt="Credencial" class="h-auto w-15 object-contain" loading="lazy" />
       </div>
 
       <div class="feature-grid mb-12">
-        <article class="feature-card block">
+        <article class="feature-card block" style="display: flex; flex-direction: column; align-items: flex-start;">
           <h3>Control y autonomía financiera</h3>
           <p>Asignación de fondos, límites y gestión de contracargos parametrizados.</p>
         </article>
-        <article class="feature-card block">
+        <article class="feature-card block" style="display: flex; flex-direction: column; align-items: flex-start;">
           <h3>Experiencia 100% digital</h3>
           <p>Activación, bloqueo y seguimiento desde una app o portal personalizado.</p>
         </article>
-        <article class="feature-card block">
+        <article class="feature-card block" style="display: flex; flex-direction: column; align-items: flex-start;">
           <h3>Mejor gestión de gastos corporativos</h3>
           <p>Simplificación de viáticos, compras y pagos operativos con trazabilidad total.</p>
         </article>
-        <article class="feature-card block">
+        <article class="feature-card block" style="display: flex; flex-direction: column; align-items: flex-start;">
           <h3>Marca propia, mayor visibilidad</h3>
           <p>Emisión personalizada bajo los estándares de cada entidad emisora.</p>
         </article>
       </div>
 
       <div class="grid items-center gap-10 md:grid-cols-[.9fr_1.1fr]">
-        <Image src={card} alt="Tarjeta Credencial" class="mx-auto w-full max-w-[390px] object-contain" />
+        <Image src={tarjetasEmision} alt="Tarjetas Emisión" class="mx-auto w-full max-w-[390px] object-contain" />
         <div>
           <div class="mb-5 flex gap-3">
-            <span class="rounded-full bg-[#16180e] px-9 py-2 text-[13px] text-white">Débito</span>
-            <span class="rounded-full bg-[#16180e] px-9 py-2 text-[13px] text-white">Crédito</span>
-            <span class="rounded-full bg-[#16180e] px-9 py-2 text-[13px] text-white">Prepago</span>
+            <span class="rounded-full bg-[#16180e] py-1 text-[22px] text-white pill-wide">Débito</span>
+            <span class="rounded-full bg-[#16180e] py-1 text-[22px] text-white pill-wide">Crédito</span>
+            <span class="rounded-full bg-[#16180e] py-1 text-[22px] text-white pill-wide">Prepaga</span>
           </div>
           <p class="section-copy">
             Nuestro servicio de emisión de tarjetas crea un vínculo directo entre las empresas y sus clientes, habilitando la gestión de gastos en circuitos cerrados con aceptación internacional en todos los segmentos.

@@ -1,30 +1,34 @@
 ---
 import { Image } from 'astro:assets';
 import heroImage from '../assets/images/Imagen Hero.png';
+import fondoProcesamiento from '../assets/images/Fondo Procesamiento.png';
 ---
 
 <section class="dark-band pt-28 md:pt-32">
-  <div class="content grid min-h-[575px] items-start gap-10 pb-20 pt-14 md:grid-cols-[.9fr_1.1fr] md:pt-20">
+  <div class="content grid items-start gap-10 pb-[5px] pt-14 md:grid-cols-[.9fr_1.1fr] md:pt-20">
     <div class="max-w-[450px] pt-7">
       <h1 class="text-[38px] font-semibold leading-[1.05] text-white md:text-[54px]">
         Soluciones<br />
         de pago <span class="text-[var(--blue)]">B2B</span>
       </h1>
-      <p class="mt-6 max-w-[370px] text-[17px] leading-tight text-white">
+      <p class="mt-6 max-w-[370px] text-[22px] leading-tight text-white">
         Pagos B2B simples y escalables con licencias activas y estándar internacional.
       </p>
     </div>
 
-    <div class="relative">
-      <Image src={heroImage} alt="Soluciones de pago B2B" class="ml-auto h-[248px] w-full max-w-[620px] rounded-[6px] object-cover md:h-[360px]" loading="eager" />
-      <a href="#contacto" class="absolute -bottom-6 left-1/2 inline-flex -translate-x-1/2 items-center justify-center rounded-[4px] bg-[var(--blue)] px-10 py-4 text-[13px] font-medium text-white shadow-[0_10px_24px_rgba(27,101,255,.45)] transition hover:brightness-110">
-        Asesórate
-      </a>
+    <div class="mx-auto w-full max-w-[620px]">
+      <Image src={heroImage} alt="Soluciones de pago B2B" class="h-[248px] w-full rounded-[6px] object-cover md:h-[360px]" loading="eager" />
     </div>
   </div>
 
-  <div class="content pb-20 text-center" data-solutions-carousel>
-    <h2 class="mb-9 text-[25px] font-medium text-[#bfc0c6]">Conoce nuestras soluciones</h2>
+  <div class="content flex justify-center pb-10 pt-5 md:pb-16">
+    <a href="#contacto" class="inline-flex w-fit items-center justify-center rounded-[4px] px-10 py-4 text-[13px] font-medium text-white shadow-[0_10px_24px_rgba(27,101,255,.45)] transition duration-200 hover:-translate-y-0.5 hover:brightness-110" style="background: linear-gradient(135deg, #5aa7ff 0%, var(--blue) 52%, #1747da 100%);">
+      Asesórate
+    </a>
+  </div>
+
+  <div class="content pb-40 text-center" data-solutions-carousel>
+    <h2 class="mb-9 pb-5 text-[25px] font-medium text-[#bfc0c6]">Conoce nuestras soluciones</h2>
 
     <div class="solution-carousel" aria-live="polite">
       <article class="solution-card" data-solution-card data-index="0">
@@ -58,6 +62,15 @@ import heroImage from '../assets/images/Imagen Hero.png';
       <button class="solution-dot" type="button" data-solution-dot data-index="2" aria-label="Ver Adquirencia"></button>
     </div>
   </div>
+
+  <div class="content relative" style="position: relative;">
+    <div class="section-panel photo-heading rounded-b-none" style={`--heading-image: url('${fondoProcesamiento.src}'); position: relative; top: -120px;`} id="procesamiento">
+      <div>
+        <h2 class="section-title">Procesamiento 365</h2>
+        <p class="m-0 text-[14px] text-white">Acreditación de cobros con tarjeta en el día, los 365 días del año.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
@@ -85,13 +98,13 @@ import heroImage from '../assets/images/Imagen Hero.png';
     position: relative;
     min-height: 160px;
     padding: 32px;
-    border: 1px solid rgba(255, 255, 255, .12);
     border-radius: 10px;
     background: #101010;
     color: white;
     text-align: left;
     opacity: .55;
     filter: blur(1px);
+    cursor: pointer;
     z-index: 1;
     transform: translateY(0) scale(.96);
     box-shadow: 0 0 34px rgba(27, 101, 255, .55);
@@ -124,15 +137,14 @@ import heroImage from '../assets/images/Imagen Hero.png';
   }
 
   .solution-card.is-active {
-    min-height: 228px;
     padding: 36px;
     border-color: var(--blue);
     border-radius: 12px;
-    background: #080808;
+    background: linear-gradient(180deg, #080808 40%, var(--blue) 100%);
     opacity: 1;
     filter: none;
     z-index: 5;
-    transform: translateY(-14px) scale(1.06);
+    transform: translateY(-5px) scale(1.06);
     box-shadow: 0 0 44px rgba(27, 101, 255, .78);
   }
 
@@ -216,13 +228,19 @@ import heroImage from '../assets/images/Imagen Hero.png';
         const isActive = index === activeIndex;
 
         dot.classList.toggle('is-active', isActive);
-        dot.setAttribute('aria-selected', String(isActive));
+        dot.setAttribute('aria-current', isActive ? 'page' : 'false');
       });
     };
 
     dots.forEach((dot) => {
       dot.addEventListener('click', () => {
         updateCarousel(Number(dot.getAttribute('data-index')));
+      });
+    });
+
+    cards.forEach((card) => {
+      card.addEventListener('click', () => {
+        updateCarousel(Number(card.getAttribute('data-index')));
       });
     });
 
